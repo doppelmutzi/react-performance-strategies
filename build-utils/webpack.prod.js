@@ -14,7 +14,14 @@ const config = {
   },
   optimization: {
     splitChunks: {
-      chunks: "all",
+      cacheGroups: {
+        vendor: {
+          name: "node_vendors", // part of the bundle name and
+          // can be used in chunks array of HtmlWebpackPlugin
+          test: /[\\/]node_modules[\\/]/,
+          chunks: "all",
+        },
+      },
     },
   },
   module: {
