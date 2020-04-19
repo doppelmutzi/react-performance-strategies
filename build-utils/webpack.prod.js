@@ -4,7 +4,10 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const config = {
-  mode: "production",
+  mode: "production",  
+  optimization: {
+    minimize: false,
+  },
   entry: {
     app: [`${commonPaths.appEntry}/index.js`],
   },
