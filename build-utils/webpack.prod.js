@@ -11,7 +11,6 @@ const config = {
   output: {
     filename: "static/[name].js",
   },
-  devtool: "source-map",  
   module: {
     rules: [
       {
