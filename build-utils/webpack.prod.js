@@ -44,6 +44,13 @@ const config = {
     new HtmlWebpackPlugin({
       template: `public/index.html`,
       favicon: `public/favicon.ico`,
+      chunks: ["profile"],
+      filename: `${commonPaths.outputPath}/profile.html`,
+    }),
+    new HtmlWebpackPlugin({
+      template: `public/index.html`,
+      favicon: `public/favicon.ico`,
+      chunks: ["app"],
     }),
   ],
 };
