@@ -7,6 +7,7 @@ const config = {
   mode: "production",
   entry: {
     app: [`${commonPaths.appEntry}/index.js`],
+    profile: [`${commonPaths.appEntry}/profile/Profile.js`],
   },
   output: {
     filename: "static/[name].js",
@@ -39,6 +40,7 @@ const config = {
     new MiniCssExtractPlugin({
       filename: "styles/[name].css",
     }),
+
     new HtmlWebpackPlugin({
       template: `public/index.html`,
       favicon: `public/favicon.ico`,

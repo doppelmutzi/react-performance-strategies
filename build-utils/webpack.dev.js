@@ -8,7 +8,8 @@ const port = process.env.PORT || 3000;
 const config = {
   mode: "development",
   entry: {
-    app: `${commonPaths.appEntry}/index.js`,
+    app: [`${commonPaths.appEntry}/index.js`],
+    profile: [`${commonPaths.appEntry}/profile/Profile.js`],
   },
   output: {
     filename: "[name].js",
