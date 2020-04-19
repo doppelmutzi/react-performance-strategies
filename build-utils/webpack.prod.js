@@ -11,6 +11,9 @@ const config = {
   output: {
     filename: "static/[name].js",
   },
+  optimization: {
+    
+  },
   module: {
     rules: [
       {
