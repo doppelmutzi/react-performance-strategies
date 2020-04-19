@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "Demo project accompanying my article about React performance optimization strategies.",
   "scripts": {
+    "l": "ntl",
     "dev": "webpack-dev-server --env.env=dev",
-    "dev:bundleanalyzer": "npm run dev -- --env.addons=bundleanalyzer",
+    "dev:analyze": "npm run dev -- --env.addons=bundleanalyzer",
     "prebuild": "rimraf dist",
-    "build": "cross-env NODE_ENV=production webpack -p --env.env=prod",
-    "build:bundleanalyzer": "npm run build -- --env.addons=bundleanalyzer"
+    "build": "webpack --env.env=prod",
+    "build:analyze": "npm run build -- --env.addons=bundleanalyzer"
   },
   "keywords": [
     "react",
@@ -23,6 +24,7 @@
   ],
   "dependencies": {
     "@loadable/component": "^5.12.0",
+    "lodash": "4.17.14",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -35,6 +37,7 @@
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
     "@hot-loader/react-dom": "^16.13.0",
+    "assets-webpack-plugin": "^3.9.12",
     "autoprefixer": "^9.7.6",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
@@ -51,6 +54,7 @@
     "eslint-plugin-react-hooks": "^3.0.0",
     "eslint-plugin-standard": "^4.0.1",
     "html-webpack-plugin": "^4.2.0",
+    "inline-manifest-webpack-plugin": "^4.0.2",
     "mini-css-extract-plugin": "^0.9.0",
     "ntl": "^5.0.0",
     "postcss-loader": "^3.0.0",
@@ -60,7 +64,6 @@
     "rimraf": "^3.0.2",
     "source-map-loader": "^0.2.4",
     "style-loader": "^1.1.3",
-    "terser-webpack-plugin": "^2.3.5",
     "webpack": "^4.42.1",
     "webpack-bundle-analyzer": "^3.6.1",
     "webpack-cli": "^3.3.11",

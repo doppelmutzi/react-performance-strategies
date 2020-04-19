@@ -1,17 +1,17 @@
-const commonPaths = require('./common-paths');
+const commonPaths = require("./common-paths");
 
-const webpack = require('webpack');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const config = {
-  mode: 'production',
+  mode: "production",
   entry: {
     app: [`${commonPaths.appEntry}/index.js`],
   },
   output: {
-    filename: 'static/[name].[hash].js',
+    filename: "static/[name].js",
   },
-  devtool: 'source-map',
+  devtool: "source-map",  
   module: {
     rules: [
       {
@@ -21,16 +21,16 @@ const config = {
             loader: MiniCssExtractPlugin.loader,
           },
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
-              modules: true,
+              modules: false,
               importLoaders: 1,
-              localsConvention: 'camelCase',
+              localsConvention: "camelCase",
               sourceMap: true,
             },
           },
           {
-            loader: 'postcss-loader',
+            loader: "postcss-loader",
           },
         ],
       },
@@ -38,7 +38,11 @@ const config = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles/[name].[hash].css',
+      filename: "styles/[name].css",
+    }),
+    new HtmlWebpackPlugin({
+      template: `public/index.html`,
+      favicon: `public/favicon.ico`,
     }),
   ],
 };

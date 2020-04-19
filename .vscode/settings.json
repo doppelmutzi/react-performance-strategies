@@ -8,5 +8,6 @@
     },
     "[javascriptreact]": {
       "editor.formatOnSave": false
-    }
+    },
+    "workbench.editor.enablePreview": false
   }

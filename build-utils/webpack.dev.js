@@ -1,5 +1,6 @@
 const commonPaths = require("./common-paths");
 
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 
 const port = process.env.PORT || 3000;
@@ -10,7 +11,7 @@ const config = {
     app: `${commonPaths.appEntry}/index.js`,
   },
   output: {
-    filename: "[name].[hash].js",
+    filename: "[name].js",
   },
   resolve: {
     alias: {
@@ -29,7 +30,7 @@ const config = {
           {
             loader: "css-loader",
             options: {
-              modules: true,
+              modules: false,
               localsConvention: "camelCase",
               sourceMap: true,
             },
@@ -38,7 +39,13 @@ const config = {
       },
     ],
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: `public/index.html`,
+      favicon: `public/favicon.ico`,
+    }),
+  ],
   devServer: {
     host: "localhost",
     port: port,
