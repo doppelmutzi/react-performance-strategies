@@ -15,6 +15,7 @@ const config = {
   optimization: {
     splitChunks: {
       chunks: "all",
+      minSize: 1000 * 600,
     },
   },
   module: {
