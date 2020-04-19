@@ -12,6 +12,11 @@ const config = {
   output: {
     filename: "static/[name].js",
   },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
+  },
   module: {
     rules: [
       {
