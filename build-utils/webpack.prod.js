@@ -22,7 +22,7 @@ const config = {
           chunks: "all",
         },
         common: {
-          // test: /[\\/]src[\\/]components[\\/]/,
+          test: /[\\/]src[\\/]components[\\/]/,
           chunks: "all",
           minSize: 0,
         },
