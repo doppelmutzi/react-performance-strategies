@@ -4,8 +4,10 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Profile from "../profile/Profile";
 import "./Blog.css";
 import Headline from "../components/Headline";
+import { add } from "../components/util";
 
 export default function Blog() {
+  console.log("add", add(2, 2));
   return (
     <Router>
       <div>

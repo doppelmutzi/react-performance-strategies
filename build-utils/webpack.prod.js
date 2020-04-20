@@ -21,6 +21,11 @@ const config = {
           test: /[\\/]node_modules[\\/]/,
           chunks: "all",
         },
+        common: {
+          // test: /[\\/]src[\\/]components[\\/]/,
+          chunks: "all",
+          minSize: 0,
+        },
       },
     },
   },
