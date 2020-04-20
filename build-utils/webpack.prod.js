@@ -12,6 +12,11 @@ const config = {
   output: {
     filename: "static/[name].js",
   },
+  optimization: {
+    runtimeChunk: {
+      name: "manifest",
+    },
+  },
   module: {
     rules: [
       {
