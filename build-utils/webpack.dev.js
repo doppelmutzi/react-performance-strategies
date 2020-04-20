@@ -9,7 +9,6 @@ const config = {
   mode: "development",
   entry: {
     app: [`${commonPaths.appEntry}/index.js`],
-    profile: [`${commonPaths.appEntry}/profile/Profile.js`],
   },
   output: {
     filename: "[name].js",

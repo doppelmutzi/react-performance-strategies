@@ -7,12 +7,12 @@ const config = {
   mode: "production",
   entry: {
     app: [`${commonPaths.appEntry}/index.js`],
-    profile: [`${commonPaths.appEntry}/profile/Profile.js`],
   },
   output: {
     filename: "static/[name].js",
   },
   optimization: {
+    minimize: false,
     splitChunks: {
       cacheGroups: {
         vendor: {

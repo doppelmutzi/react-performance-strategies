@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import Profile from "../profile/Profile";
+import Profile from "../profile/ProfileLazy";
 import "./Blog.css";
 import Headline from "../components/Headline";
 
@@ -36,7 +36,7 @@ export default function Blog() {
 function Articles() {
   return (
     <div className="blog">
-      <Headline>Articles</Headline>
+      <Headline>My Awesome Articles</Headline>
       <article>
         <h3>Article 1</h3>
         <p>Lorem ipsum</p>
