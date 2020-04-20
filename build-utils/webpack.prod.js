@@ -12,6 +12,7 @@ const config = {
   output: {
     filename: "static/[name].js",
   },
+  devtool: "source-map",
   optimization: {
     splitChunks: {
       cacheGroups: {
