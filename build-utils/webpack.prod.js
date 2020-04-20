@@ -12,7 +12,6 @@ const config = {
     filename: "static/[name].js",
   },
   optimization: {
-    minimize: false,
     splitChunks: {
       cacheGroups: {
         vendor: {
