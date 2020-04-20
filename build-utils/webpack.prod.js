@@ -11,6 +11,11 @@ const config = {
   output: {
     filename: "static/[name].js",
   },
+  performance: {
+    hints: "error",
+    maxAssetSize: 100 * 1024, // in KiB = 1024 bytes
+    maxEntrypointSize: 100 * 1024, // in KiB = 1024 bytes
+  },
   module: {
     rules: [
       {
