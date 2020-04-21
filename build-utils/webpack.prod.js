@@ -13,6 +13,10 @@ const config = {
     filename: "static/[name].[contenthash].js",
   },
   optimization: {
+    moduleIds: "hashed",
+    runtimeChunk: {
+      name: "manifest",
+    },
     splitChunks: {
       cacheGroups: {
         vendor: {
