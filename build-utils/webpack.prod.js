@@ -10,7 +10,7 @@ const config = {
     profile: [`${commonPaths.appEntry}/profile/Profile.js`],
   },
   output: {
-    filename: "static/[name].[chunkhash].js",
+    filename: "static/[name].[contenthash].js",
   },
   optimization: {
     splitChunks: {
@@ -50,7 +50,7 @@ const config = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "styles/[name].[chunkhash].css",
+      filename: "styles/[name].[contenthash].css",
     }),
 
     new HtmlWebpackPlugin({
