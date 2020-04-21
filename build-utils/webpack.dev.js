@@ -11,6 +11,10 @@ const config = {
     app: [`${commonPaths.appEntry}/index.js`],
     profile: [`${commonPaths.appEntry}/profile/Profile.js`],
   },
+  externals: {
+    react: "React",
+    "react-dom": "ReactDOM",
+  },
   output: {
     filename: "[name].js",
   },

@@ -12,6 +12,10 @@ const config = {
   output: {
     filename: "static/[name].js",
   },
+  externals: {
+    react: "React",
+    "react-dom": "ReactDOM",
+  },
   optimization: {
     runtimeChunk: {
       name: "manifest",
